@@ -1,0 +1,26 @@
+[
+    {
+        "id": 0,
+        "offsets": [
+            157,
+            273
+        ],
+        "type": 6,
+        "key_size": 4,
+        "value_size": 8,
+        "max_entries": 256,
+        "name": "rxcnt"
+    },
+    {
+        "id": 1,
+        "offsets": [
+            60,
+            184
+        ],
+        "type": 1,
+        "key_size": 24,
+        "value_size": 40,
+        "max_entries": 256,
+        "name": "vip2tnl"
+    }
+]

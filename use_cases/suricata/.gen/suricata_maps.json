@@ -1,0 +1,24 @@
+[
+    {
+        "id": 0,
+        "offsets": [
+            84
+        ],
+        "type": 5,
+        "key_size": 16,
+        "value_size": 16,
+        "max_entries": 32768,
+        "name": "flow_table_v4"
+    },
+    {
+        "id": 1,
+        "offsets": [
+            124
+        ],
+        "type": 5,
+        "key_size": 40,
+        "value_size": 16,
+        "max_entries": 32768,
+        "name": "flow_table_v6"
+    }
+]

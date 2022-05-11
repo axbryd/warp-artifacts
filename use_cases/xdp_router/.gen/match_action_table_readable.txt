@@ -1,0 +1,13 @@
+hXDPc-acc Match Action Table:
+> size: 9*4B = 36B
+> fields: [Pkt(off: 12, len: 16b) [AluOps.le None], Pkt(off: 16, len: 16b) [& 65535]]
+> content: 
+	0: p0 | [43144, 1544] | xdp_pass
+	1: p1 | [43144, 8] | map #3, pc=38, key=([0, 4): Pkt[34, 38))
+	2: p2 | [43144, X] | xdp_drop
+	3: p3 | [129, 1544] | xdp_pass
+	4: p4 | [129, 8] | map #3, pc=38, key=([0, 4): Pkt[34, 38))
+	5: p5 | [129, X] | xdp_drop
+	6: p6 | [1544, X] | xdp_pass
+	7: p7 | [8, X] | map #3, pc=38, key=([0, 4): Pkt[30, 34))
+	8: p8 | [X, X] | xdp_drop

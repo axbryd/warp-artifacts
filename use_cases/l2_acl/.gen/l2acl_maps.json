@@ -1,0 +1,13 @@
+[
+    {
+        "id": 0,
+        "offsets": [
+            33
+        ],
+        "type": 1,
+        "key_size": 6,
+        "value_size": 4,
+        "max_entries": 256,
+        "name": "map"
+    }
+]

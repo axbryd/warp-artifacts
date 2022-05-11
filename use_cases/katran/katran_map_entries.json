@@ -1,0 +1,157 @@
+[
+	{
+		"name": "vip_map", "comment": "ipv4 | udp     with flags",
+		"map_id": 6, "key": "01 01 01 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 11 00", 
+		"key_info": "vip (16B) | port(16B) | proto(1B) | pad(1B) ",
+		"value": "00 00 00 00 00 00 00 00", "value_info": "flags(4B) | vip_num (4B)"
+	},
+	{
+		"name": "vip_map", "comment": "ipv4 | tcp     with flags",
+		"map_id": 6, "key": "01 01 01 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 06 00", 
+		"key_info": "vip (16B) | port(16B) | proto(1B) | pad(1B) ",
+		"value": "09 00 00 00 00 00 00 00", "value_info": "flags(4B) | vip_num (4B)"
+	},
+	{
+		"name": "vip_map", "comment": "ipv6 | udp     with flags",
+		"map_id": 6, "key": "11 11 00 00 00 00 00 00 00 00 00 00 00 00 11 11 00 00 11 00", 
+		"key_info": "vip (16B) | port(16B) | proto(1B) | pad(1B) ",
+		"value": "01 00 00 00 01 00 00 00", "value_info": "flags(4B) | vip_num (4B)"
+	},
+	{
+		"name": "vip_map", "comment": "ipv6 | tcp     with flags",
+		"map_id": 6, "key": "11 11 00 00 00 00 00 00 00 00 00 00 00 00 11 11 00 00 06 00", 
+		"key_info": "vip (16B) | port(16B) | proto(1B) | pad(1B) ",
+		"value": "01 00 00 00 01 00 00 00", "value_info": "flags(4B) | vip_num (4B)"
+	},
+	{
+		"name": "vip_map", "comment": "ipv6 | tcp     without flags",
+		"map_id": 6, "key": "a1 a1 00 00 00 00 00 00 00 00 00 00 00 00 a1 a1 00 00 06 00", 
+		"key_info": "vip (16B) | port(16B) | proto(1B) | pad(1B) ",
+		"value": "09 00 00 00 01 00 00 00", "value_info": "flags(4B) | vip_num (4B)"
+	},
+	{
+		"comment": "array_of_maps",
+		"name": "lru_mapping",
+		"map_id": 5, "key": "00 00 00 00", "key_info": "num_cpu (4B)",
+		"value": "07", "value_info" : "LRU MAP POINTER"
+	},
+	{
+		"name": "reals", "comment": "ipv4",
+		"map_id": 3, "key": "00 00 00 00", "key_info": "u32 position",
+		"value": "ee ee ee ee 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00",
+		"value_info": "u32[4] real_ip.dst | flags | pad"
+	},
+	{
+		"name": "reals", "comment": "ipv6",
+		"map_id": 3, "key": "01 00 00 00", "key_info": "u32 position",
+		"value": "ee ee 00 00 00 00 00 00 00 00 00 00 00 00 ee ee 01 00 00 00",
+		"value_info": "u32[4] real_ip.dst | flags | pad"
+	},
+	{
+		"name": "reals", "comment": "ipv6",
+		"map_id": 3, "key": "02 00 00 00", "key_info": "u32 position",
+		"value": "ee ee 00 00 00 00 00 00 00 00 00 00 00 00 ee ee 01 00 00 00",
+		"value_info": "u32[4] real_ip.dst | flags | pad"
+	},
+	{
+		"name": "ctl_array",
+		"map_id": 0, "key": "00 00 00 00", "key_info": "u32 pos",
+		"value": "aa bb cc dd ee ff 00 00", "value_info": "mac_address (6B) | pad(2)"
+	},
+	{
+		"name": "lru_cache_0", "comment": "ipv4 key | udp",
+		"map_id": 7, "key": "0a 0a 0a 0a 00 00 00 00 00 00 00 00 00 00 00 00 01 01 01 01 00 00 00 00 00 00 00 00 00 00 aa aa bb bb 00 00 11 00 00 00",
+		"key_info": "ip.src | ip.dst | sport | dport | proto | pad(3)",
+		"value": "00 00 00 00 00 00 00 00 00 00 00 00",
+		"value_info": "u32 pos | u64 time"
+	},
+	{
+		"name": "lru_cache_0", "comment": "ipv4 key | tcp",
+		"map_id": 7, "key": "0a 0a 0a 0a 00 00 00 00 00 00 00 00 00 00 00 00 01 01 01 01 00 00 00 00 00 00 00 00 00 00 aa aa bb bb 00 00 06 00 00 00",
+		"key_info": "ip.src | ip.dst | sport | dport | proto | pad(3)",
+		"value": "00 00 00 00 00 00 00 00 00 00 00 00",
+		"value_info": "u32 pos | u64 time"
+	},
+	{
+		"name": "lru_cache_0", "comment": "ipv4 key | udp",
+		"map_id": 7, "key": "0a 0a 0a 0a 00 00 00 00 00 00 00 00 00 00 00 00 01 01 01 01 00 00 00 00 00 00 00 00 00 00 00 00 bb bb 00 00 11 00 00 00",
+		"key_info": "ip.src | ip.dst | sport | dport | proto | pad(3)",
+		"value": "00 00 00 00 00 00 00 00 00 00 00 00",
+		"value_info": "u32 pos | u64 time"
+	},
+	{
+		"name": "lru_cache_0", "comment": "ipv4 key | tcp",
+		"map_id": 7, "key": "0a 0a 0a 0a 00 00 00 00 00 00 00 00 00 00 00 00 01 01 01 01 00 00 00 00 00 00 00 00 00 00 00 00 bb bb 00 00 06 00 00 00",
+		"key_info": "ip.src | ip.dst | sport | dport | proto | pad(3)",
+		"value": "00 00 00 00 00 00 00 00 00 00 00 00",
+		"value_info": "u32 pos | u64 time"
+	},
+	{
+		"name": "lru_cache_0", "comment": "ipv6 key | udp",
+		"map_id": 7, "key": "aa aa 00 00 00 00 00 00 00 00 00 00 00 00 aa aa 11 11 00 00 00 00 00 00 00 00 00 00 00 00 11 11 bb bb 00 00 11 00 00 00",
+		"key_info": "ip.src | ip.dst | sport | dport | proto | pad(3)",
+		"value": "01 00 00 00 00 00 00 00 00 00 00 00",
+		"value_info": "u32 pos | u64 time"
+	},
+	{
+		"name": "lru_cache_0", "comment": "ipv6 key | tcp",
+		"map_id": 7, "key": "aa aa 00 00 00 00 00 00 00 00 00 00 00 00 aa aa 11 11 00 00 00 00 00 00 00 00 00 00 00 00 11 11 bb bb 00 00 06 00 00 00",
+		"key_info": "ip.src | ip.dst | sport | dport | proto | pad(3)",
+		"value": "01 00 00 00 00 00 00 00 00 00 00 00",
+		"value_info": "u32 pos | u64 time"
+	},
+	{
+		"name": "lru_cache_0", "comment": "ipv6 key | udp",
+		"map_id": 7, "key": "aa aa 00 00 00 00 00 00 00 00 00 00 00 00 aa aa 11 11 00 00 00 00 00 00 00 00 00 00 00 00 11 11 00 00 00 00 11 00 00 00",
+		"key_info": "ip.src | ip.dst | sport | dport | proto | pad(3)",
+		"value": "01 00 00 00 00 00 00 00 00 00 00 00",
+		"value_info": "u32 pos | u64 time"
+	},
+	{
+		"name": "lru_cache_0", "comment": "ipv6 key | tcp",
+		"map_id": 7, "key": "aa aa 00 00 00 00 00 00 00 00 00 00 00 00 aa aa 11 11 00 00 00 00 00 00 00 00 00 00 00 00 11 11 00 00 00 00 06 00 00 00",
+		"key_info": "ip.src | ip.dst | sport | dport | proto | pad(3)",
+		"value": "01 00 00 00 00 00 00 00 00 00 00 00",
+		"value_info": "u32 pos | u64 time"
+	},
+	{
+		"name": "lru_cache_0", "comment": "ipv6 key | udp",
+		"map_id": 7, "key": "11 11 00 00 00 00 00 00 00 00 00 00 00 00 11 11 a1 a1 00 00 00 00 00 00 00 00 00 00 00 00 a1 a1 bb bb 00 00 11 00 00 00",
+		"key_info": "ip.src | ip.dst | sport | dport | proto | pad(3)",
+		"value": "01 00 00 00 00 00 00 00 00 00 00 00",
+		"value_info": "u32 pos | u64 time"
+	},
+	{
+		"name": "lru_cache_0", "comment": "ipv6 key | tcp",
+		"map_id": 7, "key": "11 11 00 00 00 00 00 00 00 00 00 00 00 00 21 11 a1 a1 00 00 00 00 00 00 00 00 00 00 00 00 a1 a1 bb bb 00 00 06 00 00 00",
+		"key_info": "ip.src | ip.dst | sport | dport | proto | pad(3)",
+		"value": "01 00 00 00 00 00 00 00 00 00 00 00",
+		"value_info": "u32 pos | u64 time"
+	},
+	{
+		"name": "ch_rings",
+		"map_id": 4, "key": "4f 02 02 00",
+		"value": "01 00 00 00"
+	},
+	{
+		"name": "vip_map", "comment": "ipv4 | udp     with flags",
+		"map_id": 6, "key": "0d 0d 0d 0d 00 00 00 00 00 00 00 00 00 00 00 00 00 00 11 00", 
+		"key_info": "vip (16B) | port(16B) | proto(1B) | pad(1B) ",
+		"value": "00 00 00 00 00 00 00 00", "value_info": "flags(4B) | vip_num (4B)"
+	},
+	{
+		"name": "ch_rings",
+		"map_id": 4, "key": "56 79 00 00",
+		"value": "02 00 00 00"
+	},
+	{
+		"name": "ch_rings",
+		"map_id": 4, "key": "8c 43 01 00",
+		"value": "01 00 00 00"
+	},
+	{
+		"name": "ch_rings",
+		"map_id": 4, "key": "4e 02 01 00",
+		"value": "02 00 00 00"
+	}
+]

@@ -1,0 +1,10 @@
+hXDPc-acc Match Action Table:
+> size: 6*6B = 36B
+> fields: [Pkt(off: 12, len: 16b), Pkt(off: 14, len: 8b) [& 15], Pkt(off: 20, len: 16b) [& 65343], Pkt(off: 23, len: 8b)]
+> content: 
+	0: p0 | [8, 5, 0, 17] | map #0, pc=49, key=([0, 4): Pkt[26, 30), [4, 8): Pkt[30, 34), [8, 10): Pkt[34, 36), [10, 12): Pkt[36, 38), [12, 13): Pkt[23, 24), [13, 16): 0)
+	1: p1 | [8, 5, 0, 6] | map #0, pc=49, key=([0, 4): Pkt[26, 30), [4, 8): Pkt[30, 34), [8, 10): Pkt[34, 36), [10, 12): Pkt[36, 38), [12, 13): Pkt[23, 24), [13, 16): 0)
+	2: p2 | [8, 5, 0, X] | xdp_drop
+	3: p3 | [8, 5, X, X] | xdp_drop
+	4: p4 | [8, X, X, X] | xdp_drop
+	5: p5 | [X, X, X, X] | xdp_pass

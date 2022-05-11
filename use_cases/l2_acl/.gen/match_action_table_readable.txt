@@ -1,0 +1,7 @@
+hXDPc-acc Match Action Table:
+> size: 3*2B = 6B
+> fields: [Pkt(off: 12, len: 16b)]
+> content: 
+	0: p0 | [56710] | xdp_drop
+	1: p1 | [8] | map #0, pc=35
+	2: p2 | [X] | xdp_pass

@@ -1,0 +1,927 @@
+[
+    {
+        "matches": [
+            {
+                "type": "DontCare",
+                "operand0": {
+                    "offset": 12,
+                    "len": 16,
+                    "field_manipulations": [],
+                    "type": "PacketField"
+                }
+            },
+            {
+                "type": "DontCare",
+                "operand0": {
+                    "offset": 20,
+                    "len": 8,
+                    "field_manipulations": [],
+                    "type": "PacketField"
+                }
+            },
+            {
+                "type": "DontCare",
+                "operand0": {
+                    "offset": 23,
+                    "len": 8,
+                    "field_manipulations": [],
+                    "type": "PacketField"
+                }
+            }
+        ],
+        "action": {
+            "type": "XDPAction",
+            "xdp_action": "xdp_pass"
+        },
+        "priority": 6,
+        "rule_metadata": {
+            "jumped_insns": 16
+        }
+    },
+    {
+        "matches": [
+            {
+                "match_op": "==",
+                "operand0": {
+                    "offset": 12,
+                    "len": 16,
+                    "field_manipulations": [],
+                    "type": "PacketField"
+                },
+                "operand1": {
+                    "val": 8,
+                    "type": "Immediate"
+                },
+                "type": "ACLMatch"
+            },
+            {
+                "type": "DontCare",
+                "operand0": {
+                    "offset": 20,
+                    "len": 8,
+                    "field_manipulations": [],
+                    "type": "PacketField"
+                }
+            },
+            {
+                "type": "DontCare",
+                "operand0": {
+                    "offset": 23,
+                    "len": 8,
+                    "field_manipulations": [],
+                    "type": "PacketField"
+                }
+            }
+        ],
+        "action": {
+            "map_id": 1,
+            "pc": 62,
+            "context": {
+                "registers": {
+                    "1": {
+                        "val": 0,
+                        "type": "Immediate"
+                    },
+                    "2": {
+                        "offset": -32,
+                        "type": "StackPointer"
+                    },
+                    "9": {
+                        "offset": 16,
+                        "len": 16,
+                        "field_manipulations": [],
+                        "type": "PacketField"
+                    },
+                    "8": {
+                        "val": 2,
+                        "type": "Immediate"
+                    },
+                    "3": {
+                        "val": 0,
+                        "type": "Immediate"
+                    },
+                    "4": {
+                        "offset": 23,
+                        "len": 8,
+                        "field_manipulations": [],
+                        "type": "PacketField"
+                    },
+                    "6": {
+                        "offset": 0,
+                        "type": "ContextPointer"
+                    },
+                    "10": {
+                        "offset": 0,
+                        "type": "StackPointer"
+                    }
+                },
+                "stack": [
+                    {
+                        "start": -32,
+                        "end": -28,
+                        "value_type": {
+                            "offset": 30,
+                            "len": 32,
+                            "field_manipulations": [],
+                            "type": "PacketField"
+                        }
+                    },
+                    {
+                        "start": -28,
+                        "end": -14,
+                        "value_type": {
+                            "val": 0,
+                            "type": "Immediate"
+                        }
+                    },
+                    {
+                        "start": -14,
+                        "end": -12,
+                        "value_type": {
+                            "val": 2,
+                            "type": "Immediate"
+                        }
+                    },
+                    {
+                        "start": -12,
+                        "end": -11,
+                        "value_type": {
+                            "offset": 23,
+                            "len": 8,
+                            "field_manipulations": [],
+                            "type": "PacketField"
+                        }
+                    },
+                    {
+                        "start": -11,
+                        "end": -8,
+                        "value_type": {
+                            "val": 0,
+                            "type": "Immediate"
+                        }
+                    }
+                ]
+            },
+            "type": "MapAccess"
+        },
+        "priority": 5,
+        "rule_metadata": {
+            "jumped_insns": 37
+        }
+    },
+    {
+        "matches": [
+            {
+                "match_op": "==",
+                "operand0": {
+                    "offset": 12,
+                    "len": 16,
+                    "field_manipulations": [],
+                    "type": "PacketField"
+                },
+                "operand1": {
+                    "val": 8,
+                    "type": "Immediate"
+                },
+                "type": "ACLMatch"
+            },
+            {
+                "type": "DontCare",
+                "operand0": {
+                    "offset": 20,
+                    "len": 8,
+                    "field_manipulations": [],
+                    "type": "PacketField"
+                }
+            },
+            {
+                "match_op": "==",
+                "operand0": {
+                    "offset": 23,
+                    "len": 8,
+                    "field_manipulations": [],
+                    "type": "PacketField"
+                },
+                "operand1": {
+                    "val": 6,
+                    "type": "Immediate"
+                },
+                "type": "ACLMatch"
+            }
+        ],
+        "action": {
+            "map_id": 1,
+            "pc": 62,
+            "context": {
+                "registers": {
+                    "1": {
+                        "val": 0,
+                        "type": "Immediate"
+                    },
+                    "2": {
+                        "offset": -32,
+                        "type": "StackPointer"
+                    },
+                    "9": {
+                        "offset": 16,
+                        "len": 16,
+                        "field_manipulations": [],
+                        "type": "PacketField"
+                    },
+                    "8": {
+                        "val": 2,
+                        "type": "Immediate"
+                    },
+                    "3": {
+                        "offset": 36,
+                        "len": 16,
+                        "field_manipulations": [],
+                        "type": "PacketField"
+                    },
+                    "4": {
+                        "offset": 23,
+                        "len": 8,
+                        "field_manipulations": [],
+                        "type": "PacketField"
+                    },
+                    "6": {
+                        "offset": 0,
+                        "type": "ContextPointer"
+                    },
+                    "10": {
+                        "offset": 0,
+                        "type": "StackPointer"
+                    }
+                },
+                "stack": [
+                    {
+                        "start": -32,
+                        "end": -28,
+                        "value_type": {
+                            "offset": 30,
+                            "len": 32,
+                            "field_manipulations": [],
+                            "type": "PacketField"
+                        }
+                    },
+                    {
+                        "start": -28,
+                        "end": -16,
+                        "value_type": {
+                            "val": 0,
+                            "type": "Immediate"
+                        }
+                    },
+                    {
+                        "start": -16,
+                        "end": -14,
+                        "value_type": {
+                            "offset": 36,
+                            "len": 16,
+                            "field_manipulations": [],
+                            "type": "PacketField"
+                        }
+                    },
+                    {
+                        "start": -14,
+                        "end": -12,
+                        "value_type": {
+                            "val": 2,
+                            "type": "Immediate"
+                        }
+                    },
+                    {
+                        "start": -12,
+                        "end": -11,
+                        "value_type": {
+                            "offset": 23,
+                            "len": 8,
+                            "field_manipulations": [],
+                            "type": "PacketField"
+                        }
+                    },
+                    {
+                        "start": -11,
+                        "end": -8,
+                        "value_type": {
+                            "val": 0,
+                            "type": "Immediate"
+                        }
+                    }
+                ]
+            },
+            "type": "MapAccess"
+        },
+        "priority": 4,
+        "rule_metadata": {
+            "jumped_insns": 43
+        }
+    },
+    {
+        "matches": [
+            {
+                "match_op": "==",
+                "operand0": {
+                    "offset": 12,
+                    "len": 16,
+                    "field_manipulations": [],
+                    "type": "PacketField"
+                },
+                "operand1": {
+                    "val": 8,
+                    "type": "Immediate"
+                },
+                "type": "ACLMatch"
+            },
+            {
+                "type": "DontCare",
+                "operand0": {
+                    "offset": 20,
+                    "len": 8,
+                    "field_manipulations": [],
+                    "type": "PacketField"
+                }
+            },
+            {
+                "match_op": "==",
+                "operand0": {
+                    "offset": 23,
+                    "len": 8,
+                    "field_manipulations": [],
+                    "type": "PacketField"
+                },
+                "operand1": {
+                    "val": 17,
+                    "type": "Immediate"
+                },
+                "type": "ACLMatch"
+            }
+        ],
+        "action": {
+            "map_id": 1,
+            "pc": 62,
+            "context": {
+                "registers": {
+                    "1": {
+                        "val": 0,
+                        "type": "Immediate"
+                    },
+                    "2": {
+                        "offset": -32,
+                        "type": "StackPointer"
+                    },
+                    "9": {
+                        "offset": 16,
+                        "len": 16,
+                        "field_manipulations": [],
+                        "type": "PacketField"
+                    },
+                    "8": {
+                        "val": 2,
+                        "type": "Immediate"
+                    },
+                    "3": {
+                        "offset": 36,
+                        "len": 16,
+                        "field_manipulations": [],
+                        "type": "PacketField"
+                    },
+                    "4": {
+                        "offset": 23,
+                        "len": 8,
+                        "field_manipulations": [],
+                        "type": "PacketField"
+                    },
+                    "6": {
+                        "offset": 0,
+                        "type": "ContextPointer"
+                    },
+                    "10": {
+                        "offset": 0,
+                        "type": "StackPointer"
+                    }
+                },
+                "stack": [
+                    {
+                        "start": -32,
+                        "end": -28,
+                        "value_type": {
+                            "offset": 30,
+                            "len": 32,
+                            "field_manipulations": [],
+                            "type": "PacketField"
+                        }
+                    },
+                    {
+                        "start": -28,
+                        "end": -16,
+                        "value_type": {
+                            "val": 0,
+                            "type": "Immediate"
+                        }
+                    },
+                    {
+                        "start": -16,
+                        "end": -14,
+                        "value_type": {
+                            "offset": 36,
+                            "len": 16,
+                            "field_manipulations": [],
+                            "type": "PacketField"
+                        }
+                    },
+                    {
+                        "start": -14,
+                        "end": -12,
+                        "value_type": {
+                            "val": 2,
+                            "type": "Immediate"
+                        }
+                    },
+                    {
+                        "start": -12,
+                        "end": -11,
+                        "value_type": {
+                            "offset": 23,
+                            "len": 8,
+                            "field_manipulations": [],
+                            "type": "PacketField"
+                        }
+                    },
+                    {
+                        "start": -11,
+                        "end": -8,
+                        "value_type": {
+                            "val": 0,
+                            "type": "Immediate"
+                        }
+                    }
+                ]
+            },
+            "type": "MapAccess"
+        },
+        "priority": 3,
+        "rule_metadata": {
+            "jumped_insns": 41
+        }
+    },
+    {
+        "matches": [
+            {
+                "match_op": "==",
+                "operand0": {
+                    "offset": 12,
+                    "len": 16,
+                    "field_manipulations": [],
+                    "type": "PacketField"
+                },
+                "operand1": {
+                    "val": 56710,
+                    "type": "Immediate"
+                },
+                "type": "ACLMatch"
+            },
+            {
+                "type": "DontCare",
+                "operand0": {
+                    "offset": 20,
+                    "len": 8,
+                    "field_manipulations": [],
+                    "type": "PacketField"
+                }
+            },
+            {
+                "type": "DontCare",
+                "operand0": {
+                    "offset": 23,
+                    "len": 8,
+                    "field_manipulations": [],
+                    "type": "PacketField"
+                }
+            }
+        ],
+        "action": {
+            "map_id": 1,
+            "pc": 186,
+            "context": {
+                "registers": {
+                    "1": {
+                        "val": 0,
+                        "type": "Immediate"
+                    },
+                    "2": {
+                        "offset": -32,
+                        "type": "StackPointer"
+                    },
+                    "9": {
+                        "offset": 18,
+                        "len": 16,
+                        "field_manipulations": [],
+                        "type": "PacketField"
+                    },
+                    "4": {
+                        "offset": 38,
+                        "len": 64,
+                        "field_manipulations": [],
+                        "type": "PacketField"
+                    },
+                    "5": {
+                        "offset": 46,
+                        "len": 32,
+                        "field_manipulations": [],
+                        "type": "PacketField"
+                    },
+                    "3": {
+                        "val": 0,
+                        "type": "Immediate"
+                    },
+                    "8": {
+                        "val": 1,
+                        "type": "Immediate"
+                    },
+                    "6": {
+                        "offset": 0,
+                        "type": "ContextPointer"
+                    },
+                    "10": {
+                        "offset": 0,
+                        "type": "StackPointer"
+                    }
+                },
+                "stack": [
+                    {
+                        "start": -32,
+                        "end": -24,
+                        "value_type": {
+                            "offset": 38,
+                            "len": 64,
+                            "field_manipulations": [],
+                            "type": "PacketField"
+                        }
+                    },
+                    {
+                        "start": -24,
+                        "end": -16,
+                        "value_type": {
+                            "offset": 46,
+                            "len": 64,
+                            "field_manipulations": [],
+                            "type": "PacketField"
+                        }
+                    },
+                    {
+                        "start": -16,
+                        "end": -14,
+                        "value_type": {
+                            "val": 0,
+                            "type": "Immediate"
+                        }
+                    },
+                    {
+                        "start": -14,
+                        "end": -12,
+                        "value_type": {
+                            "val": 10,
+                            "type": "Immediate"
+                        }
+                    },
+                    {
+                        "start": -12,
+                        "end": -11,
+                        "value_type": {
+                            "offset": 20,
+                            "len": 8,
+                            "field_manipulations": [],
+                            "type": "PacketField"
+                        }
+                    },
+                    {
+                        "start": -11,
+                        "end": -8,
+                        "value_type": {
+                            "val": 0,
+                            "type": "Immediate"
+                        }
+                    }
+                ]
+            },
+            "type": "MapAccess"
+        },
+        "priority": 2,
+        "rule_metadata": {
+            "jumped_insns": 43
+        }
+    },
+    {
+        "matches": [
+            {
+                "match_op": "==",
+                "operand0": {
+                    "offset": 12,
+                    "len": 16,
+                    "field_manipulations": [],
+                    "type": "PacketField"
+                },
+                "operand1": {
+                    "val": 56710,
+                    "type": "Immediate"
+                },
+                "type": "ACLMatch"
+            },
+            {
+                "match_op": "==",
+                "operand0": {
+                    "offset": 20,
+                    "len": 8,
+                    "field_manipulations": [],
+                    "type": "PacketField"
+                },
+                "operand1": {
+                    "val": 6,
+                    "type": "Immediate"
+                },
+                "type": "ACLMatch"
+            },
+            {
+                "type": "DontCare",
+                "operand0": {
+                    "offset": 23,
+                    "len": 8,
+                    "field_manipulations": [],
+                    "type": "PacketField"
+                }
+            }
+        ],
+        "action": {
+            "map_id": 1,
+            "pc": 186,
+            "context": {
+                "registers": {
+                    "1": {
+                        "val": 0,
+                        "type": "Immediate"
+                    },
+                    "2": {
+                        "offset": -32,
+                        "type": "StackPointer"
+                    },
+                    "9": {
+                        "offset": 18,
+                        "len": 16,
+                        "field_manipulations": [],
+                        "type": "PacketField"
+                    },
+                    "4": {
+                        "offset": 38,
+                        "len": 64,
+                        "field_manipulations": [],
+                        "type": "PacketField"
+                    },
+                    "5": {
+                        "offset": 46,
+                        "len": 32,
+                        "field_manipulations": [],
+                        "type": "PacketField"
+                    },
+                    "3": {
+                        "offset": 56,
+                        "len": 16,
+                        "field_manipulations": [],
+                        "type": "PacketField"
+                    },
+                    "8": {
+                        "val": 1,
+                        "type": "Immediate"
+                    },
+                    "6": {
+                        "offset": 0,
+                        "type": "ContextPointer"
+                    },
+                    "10": {
+                        "offset": 0,
+                        "type": "StackPointer"
+                    }
+                },
+                "stack": [
+                    {
+                        "start": -32,
+                        "end": -24,
+                        "value_type": {
+                            "offset": 38,
+                            "len": 64,
+                            "field_manipulations": [],
+                            "type": "PacketField"
+                        }
+                    },
+                    {
+                        "start": -24,
+                        "end": -16,
+                        "value_type": {
+                            "offset": 46,
+                            "len": 64,
+                            "field_manipulations": [],
+                            "type": "PacketField"
+                        }
+                    },
+                    {
+                        "start": -16,
+                        "end": -14,
+                        "value_type": {
+                            "offset": 56,
+                            "len": 16,
+                            "field_manipulations": [],
+                            "type": "PacketField"
+                        }
+                    },
+                    {
+                        "start": -14,
+                        "end": -12,
+                        "value_type": {
+                            "val": 10,
+                            "type": "Immediate"
+                        }
+                    },
+                    {
+                        "start": -12,
+                        "end": -11,
+                        "value_type": {
+                            "offset": 20,
+                            "len": 8,
+                            "field_manipulations": [],
+                            "type": "PacketField"
+                        }
+                    },
+                    {
+                        "start": -11,
+                        "end": -8,
+                        "value_type": {
+                            "val": 0,
+                            "type": "Immediate"
+                        }
+                    }
+                ]
+            },
+            "type": "MapAccess"
+        },
+        "priority": 1,
+        "rule_metadata": {
+            "jumped_insns": 49
+        }
+    },
+    {
+        "matches": [
+            {
+                "match_op": "==",
+                "operand0": {
+                    "offset": 12,
+                    "len": 16,
+                    "field_manipulations": [],
+                    "type": "PacketField"
+                },
+                "operand1": {
+                    "val": 56710,
+                    "type": "Immediate"
+                },
+                "type": "ACLMatch"
+            },
+            {
+                "match_op": "==",
+                "operand0": {
+                    "offset": 20,
+                    "len": 8,
+                    "field_manipulations": [],
+                    "type": "PacketField"
+                },
+                "operand1": {
+                    "val": 17,
+                    "type": "Immediate"
+                },
+                "type": "ACLMatch"
+            },
+            {
+                "type": "DontCare",
+                "operand0": {
+                    "offset": 23,
+                    "len": 8,
+                    "field_manipulations": [],
+                    "type": "PacketField"
+                }
+            }
+        ],
+        "action": {
+            "map_id": 1,
+            "pc": 186,
+            "context": {
+                "registers": {
+                    "1": {
+                        "val": 0,
+                        "type": "Immediate"
+                    },
+                    "2": {
+                        "offset": -32,
+                        "type": "StackPointer"
+                    },
+                    "9": {
+                        "offset": 18,
+                        "len": 16,
+                        "field_manipulations": [],
+                        "type": "PacketField"
+                    },
+                    "4": {
+                        "offset": 38,
+                        "len": 64,
+                        "field_manipulations": [],
+                        "type": "PacketField"
+                    },
+                    "5": {
+                        "offset": 46,
+                        "len": 32,
+                        "field_manipulations": [],
+                        "type": "PacketField"
+                    },
+                    "3": {
+                        "offset": 56,
+                        "len": 16,
+                        "field_manipulations": [],
+                        "type": "PacketField"
+                    },
+                    "8": {
+                        "val": 1,
+                        "type": "Immediate"
+                    },
+                    "6": {
+                        "offset": 0,
+                        "type": "ContextPointer"
+                    },
+                    "10": {
+                        "offset": 0,
+                        "type": "StackPointer"
+                    }
+                },
+                "stack": [
+                    {
+                        "start": -32,
+                        "end": -24,
+                        "value_type": {
+                            "offset": 38,
+                            "len": 64,
+                            "field_manipulations": [],
+                            "type": "PacketField"
+                        }
+                    },
+                    {
+                        "start": -24,
+                        "end": -16,
+                        "value_type": {
+                            "offset": 46,
+                            "len": 64,
+                            "field_manipulations": [],
+                            "type": "PacketField"
+                        }
+                    },
+                    {
+                        "start": -16,
+                        "end": -14,
+                        "value_type": {
+                            "offset": 56,
+                            "len": 16,
+                            "field_manipulations": [],
+                            "type": "PacketField"
+                        }
+                    },
+                    {
+                        "start": -14,
+                        "end": -12,
+                        "value_type": {
+                            "val": 10,
+                            "type": "Immediate"
+                        }
+                    },
+                    {
+                        "start": -12,
+                        "end": -11,
+                        "value_type": {
+                            "offset": 20,
+                            "len": 8,
+                            "field_manipulations": [],
+                            "type": "PacketField"
+                        }
+                    },
+                    {
+                        "start": -11,
+                        "end": -8,
+                        "value_type": {
+                            "val": 0,
+                            "type": "Immediate"
+                        }
+                    }
+                ]
+            },
+            "type": "MapAccess"
+        },
+        "priority": 0,
+        "rule_metadata": {
+            "jumped_insns": 47
+        }
+    }
+]

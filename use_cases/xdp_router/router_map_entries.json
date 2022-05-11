@@ -1,0 +1,14 @@
+[
+	{
+		"map_id": 0, "key": "00 00 00 18 0a 01 02 00", 
+ 		"value": "00 00 00 20 aa bb cc dd ee ff 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01"
+ 	},
+ 	{
+ 		"map_id": 2, "key": "0a 01 02 04", 
+ 		"value": "cc cc cc cc cc cc 00 00"
+ 	},
+ 	{
+ 		"map_id": 2, "key": "0a 01 02 03", 
+ 		"value": "cc cc cc cc cc cc 00 00"
+ 	}
+]
