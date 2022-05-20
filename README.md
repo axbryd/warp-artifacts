@@ -68,9 +68,9 @@ In the *ubpf/* folder, issue the following commands:
 
 To build the simulator is sufficient to issue the following command from within the ubpf directory:
 
-	$ make -C vm
+	$ make -C src
 
-It produces an executable in the *vm/* folder called __"hXDP_sim"__. 
+It produces an executable in the *src/* folder called __"hXDP_sim"__. 
 
 ### Generate the files needed by the simulator
 
